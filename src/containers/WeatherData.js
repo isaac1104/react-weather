@@ -15,7 +15,7 @@ class WeatherData extends Component {
           <Image src={data.icon_url} centered size="tiny"/>
           <h6>{data.observation_time}</h6>
           <Statistic.Group widths="three">
-            <Statistic>
+            <Statistic size="tiny">
               <Statistic.Label>Temp:</Statistic.Label>
               <Statistic.Value text>{data.temperature_string}</Statistic.Value>
               <Statistic.Label>Feels like:</Statistic.Label>
@@ -60,7 +60,6 @@ class WeatherData extends Component {
   }
 
   render() {
-    console.log(this.props.data);
     return (
       <Container fluid textAlign="center">
         {this.renderData()}

@@ -1,17 +1,17 @@
-import { FETCH_WEATHER_DATA, FETCH_ERROR } from "./../actions/types";
+import { FETCH_FORECAST_DATA, FETCH_ERROR } from "./../actions/types";
 
 const initialState = {
-  data: [],
+  forecast: [],
   isFound: null,
   location: null
 }
 
-function weatherDataReducer(state = initialState, action) {
+function forecastDataReducer(state = initialState, action) {
   switch (action.type) {
-    case FETCH_WEATHER_DATA:
+    case FETCH_FORECAST_DATA:
       return {
         ...state,
-        data: action.payload,
+        forecast: action.payload,
         isFound: true
       };
     case FETCH_ERROR:
@@ -24,4 +24,4 @@ function weatherDataReducer(state = initialState, action) {
   }
 }
 
-export default weatherDataReducer;
+export default forecastDataReducer;
