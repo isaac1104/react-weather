@@ -11,6 +11,7 @@ const SearchField = ({ input, label }) => {
         size="small"
         type="text"
         autoComplete="off"
+        placeholder="city, state or city, country"
       />
     </div>
   );

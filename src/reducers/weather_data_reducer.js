@@ -2,6 +2,7 @@ import { FETCH_WEATHER_DATA, FETCH_CURRENT_LOCATION } from "./../actions/types";
 
 const initialState = {
   data: [],
+  isFound: null,
   location: null
 }
 
@@ -10,7 +11,8 @@ function weatherDataReducer(state = initialState, action) {
     case FETCH_WEATHER_DATA:
       return {
         ...state,
-        data: action.payload
+        data: action.payload,
+        isFound: true
       };
     case FETCH_CURRENT_LOCATION:
       return {

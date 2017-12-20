@@ -10,7 +10,6 @@ class Search extends Component {
 
   formSubmit = ({ location }) => {
     this.props.getWeatherData(location);
-    console.log(location);
   }
 
   render() {

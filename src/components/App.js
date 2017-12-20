@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Search from "./../containers/Search";
-import WeatherContainer from "./../containers/WeatherContainer";
+import WeatherData from "./../containers/WeatherData";
 import { Container } from "semantic-ui-react";
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
     <Container fluid>
       <Header/>
       <Search/>
-      <WeatherContainer/>
+      <WeatherData/>
     </Container>
   );
 }
