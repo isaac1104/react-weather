@@ -41,13 +41,21 @@ class WeatherData extends Component {
             </Statistic>
           </Statistic.Group>
         </Container>
-      )
-    } else {
+      );
+    } else if (this.props.data.isFound === false) {
       return (
         <Container>
-          <h1>Search for a city</h1>
+          <h1>City is not found</h1>
+          <h2>Please specifiy the state or country</h2>
+          <h3>The location you have searched contains more than one cities</h3>
         </Container>
-      )
+      );
+    } else {
+        return (
+          <Container>
+            <h1>Search for a city</h1>
+          </Container>
+      );
     }
   }
 

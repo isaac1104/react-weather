@@ -1,4 +1,4 @@
-import { FETCH_WEATHER_DATA, FETCH_CURRENT_LOCATION } from "./../actions/types";
+import { FETCH_WEATHER_DATA, FETCH_CURRENT_LOCATION, FETCH_ERROR } from "./../actions/types";
 
 const initialState = {
   data: [],
@@ -18,6 +18,11 @@ function weatherDataReducer(state = initialState, action) {
       return {
         ...state,
         location: action.payload
+      };
+    case FETCH_ERROR:
+      return {
+        ...state,
+        isFound: action.payload
       }
     default:
       return state;
