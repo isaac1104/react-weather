@@ -8,7 +8,7 @@ const App = () => {
   return (
     <Container fluid
       style={{
-        backgroundColor: "#343a40",
+        backgroundColor: "black",
         minHeight: "100vh"
       }}
     >
