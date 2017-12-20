@@ -9,42 +9,42 @@ class WeatherData extends Component {
     const data = this.props.data.data.current_observation;
     if (this.props.data.isFound === true) {
       return (
-        <Container>
-          <h1>{data.display_location.full}</h1>
-          <h3>Local time: {data.local_time_rfc822}</h3>
+        <Container style={{color: "white"}}>
+          <h3>{data.display_location.full}</h3>
+          <h4>Local time: {data.local_time_rfc822}</h4>
           <Image src={data.icon_url} centered size="tiny"/>
           <h6>{data.observation_time}</h6>
-          <Statistic.Group widths="three">
-            <Statistic size="tiny">
-              <Statistic.Label>Temp:</Statistic.Label>
-              <Statistic.Value text>{data.temperature_string}</Statistic.Value>
-              <Statistic.Label>Feels like:</Statistic.Label>
-              <Statistic.Value text>{data.feelslike_string}</Statistic.Value>
-              <Statistic.Label>Weather:</Statistic.Label>
-              <Statistic.Value text>{data.weather}</Statistic.Value>
+          <Statistic.Group widths="four">
+            <Statistic>
+              <Statistic.Label style={{color: "#00aca4"}}>Temp:</Statistic.Label>
+              <Statistic.Value text style={{color: "white"}}>{data.temperature_string}</Statistic.Value>
+              <Statistic.Label style={{color: "#00aca4"}}>Feels like:</Statistic.Label>
+              <Statistic.Value text style={{color: "white"}}>{data.feelslike_string}</Statistic.Value>
             </Statistic>
             <Statistic>
-              <Statistic.Label>Wind Direction:</Statistic.Label>
-              <Statistic.Value text>{data.wind_dir}</Statistic.Value>
-              <Statistic.Label>Wind:</Statistic.Label>
-              <Statistic.Value text>{data.wind_mph} MPH</Statistic.Value>
-              <Statistic.Label>Gust:</Statistic.Label>
-              <Statistic.Value text>{data.wind_gust_mph} MPH</Statistic.Value>
+              <Statistic.Label style={{color: "#00aca4"}}>Wind:</Statistic.Label>
+              <Statistic.Value text style={{color: "white"}}>{data.wind_mph} MPH</Statistic.Value>
+              <Statistic.Label style={{color: "#00aca4"}}>Gust:</Statistic.Label>
+              <Statistic.Value text style={{color: "white"}}>{data.wind_gust_mph} MPH</Statistic.Value>
             </Statistic>
             <Statistic>
-              <Statistic.Label>Precipitation:</Statistic.Label>
-              <Statistic.Value text>{data.precip_today_string}</Statistic.Value>
-              <Statistic.Label>Humidity:</Statistic.Label>
-              <Statistic.Value text>{data.relative_humidity}</Statistic.Value>
-              <Statistic.Label>Visibility:</Statistic.Label>
-              <Statistic.Value text>{data.visibility_mi} Mi</Statistic.Value>
+              <Statistic.Label style={{color: "#00aca4"}}>Weather:</Statistic.Label>
+              <Statistic.Value text style={{color: "white"}}>{data.weather}</Statistic.Value>
+              <Statistic.Label style={{color: "#00aca4"}}>Wind Direction:</Statistic.Label>
+              <Statistic.Value text style={{color: "white"}}>{data.wind_dir}</Statistic.Value>
+            </Statistic>
+            <Statistic>
+              <Statistic.Label style={{color: "#00aca4"}}>Precipitation:</Statistic.Label>
+              <Statistic.Value text style={{color: "white"}}>{data.precip_today_string}</Statistic.Value>
+              <Statistic.Label style={{color: "#00aca4"}}>Humidity:</Statistic.Label>
+              <Statistic.Value text style={{color: "white"}}>{data.relative_humidity}</Statistic.Value>
             </Statistic>
           </Statistic.Group>
         </Container>
       );
     } else if (this.props.data.isFound === false) {
       return (
-        <Container>
+        <Container style={{color: "white"}}>
           <h1>City is not found</h1>
           <h2>Please specifiy the state or country</h2>
           <h3>The location you have searched contains more than one cities</h3>
@@ -52,7 +52,7 @@ class WeatherData extends Component {
       );
     } else {
         return (
-          <Container>
+          <Container style={{color: "white"}}>
             <h1>Search for a city</h1>
           </Container>
       );

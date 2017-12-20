@@ -6,7 +6,7 @@ const Header = () => {
   const style = {
   marginBottom: "2rem",
   width: "100%",
-  backgroundColor: "#343a40",
+  backgroundColor: "#00aca4",
 }
 
   return (
@@ -15,7 +15,7 @@ const Header = () => {
       style={style}
     >
       <NavHeader
-        as="h3"
+        as="h1"
         icon
         style={{color: "white"}}
       >

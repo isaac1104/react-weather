@@ -12,7 +12,7 @@ class ForecastData extends Component {
       const forecast = data.simpleforecast.forecastday;
       return (
         <Container textAlign="center">
-          <h4>10 Day Forecast</h4>
+          <h4 style={{color: "white"}}>10 Day Forecast</h4>
           <Container style={{display: "flex", margin: "3rem 0 3rem 0"}}>
             {forecast.map((day) => {
               return (
