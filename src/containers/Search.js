@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SearchField from "./../components/SearchField";
-import { Button, Icon, Container } from "semantic-ui-react";
+import { Button, Icon } from "semantic-ui-react";
 import { Field, reduxForm } from "redux-form";
 import * as actions from './../actions';
 import { connect } from 'react-redux';
@@ -22,7 +22,7 @@ class Search extends Component {
     }
 
     return (
-      <Container textAlign="center">
+      <div style={{textAlign:"center"}}>
         <form onSubmit={handleSubmit(this.formSubmit)} style={style}>
           <Field
             name="location"
@@ -40,7 +40,7 @@ class Search extends Component {
             </Button.Content>
           </Button>
         </form>
-      </Container>
+      </div>
     )
   }
 }

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ForecastDetail from "./../components/ForecastDetail";
 import * as actions from "./../actions";
 import { connect } from "react-redux";
-import { Container } from "semantic-ui-react";
 
 class ForecastData extends Component {
 
@@ -11,9 +10,8 @@ class ForecastData extends Component {
     if (this.props.forecast.isFound === true) {
       const forecast = data.simpleforecast.forecastday;
       return (
-        <Container textAlign="center">
-          <h4 style={{color: "white"}}>10 Day Forecast</h4>
-          <Container style={{display: "flex", margin: "3rem 0 3rem 0"}}>
+        <div style={{textAlign:"center"}}>
+          <div style={{display: "flex", margin: "3rem 0 3rem 0", justifyContent: "center", alignItems: "center"}}>
             {forecast.map((day) => {
               return (
                 <ForecastDetail
@@ -26,21 +24,21 @@ class ForecastData extends Component {
                 />
               );
             })}
-          </Container>
-        </Container>
+          </div>
+        </div>
       )
     } else {
       return(
-        <Container></Container>
+        <div></div>
       )
     }
   }
 
   render() {
     return (
-      <Container>
+      <div>
         {this.renderForecast()}
-      </Container>
+      </div>
     );
   }
 }

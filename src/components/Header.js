@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Header as NavHeader, Icon } from "semantic-ui-react";
+import { Header as NavHeader, Icon } from "semantic-ui-react";
 
 const Header = () => {
 
@@ -7,13 +7,11 @@ const Header = () => {
   marginBottom: "2rem",
   width: "100%",
   backgroundColor: "#00aca4",
+  textAlign: "center"
 }
 
   return (
-    <Container
-      textAlign="center"
-      style={style}
-    >
+    <div style={style}>
       <NavHeader
         as="h1"
         icon
@@ -22,7 +20,7 @@ const Header = () => {
         <Icon name="rain"/>
         <a href="/" style={{color: "white"}}>Weather App</a>
       </NavHeader>
-    </Container>
+    </div>
   );
 }
 
